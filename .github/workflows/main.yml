@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build docker image
-      run: docker build . --file GithubActionsTest/Dockerfile --tag sut:latest
+      run: docker build . --file Dockerfile --tag sut:latest
       
     - uses: addnab/docker-run-action@v3
       with:
