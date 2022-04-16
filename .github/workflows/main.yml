@@ -25,7 +25,6 @@ jobs:
     - uses: addnab/docker-run-action@v3
       with:
         image: sut:latest
-        run: echo "hello world"
  
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -33,7 +32,7 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
         
-    - name: Checkout tools repo
+    - name: Checkout tests repo
       uses: actions/checkout@v3
       with:
         repository: Stankin-Test/IntegrationTests
