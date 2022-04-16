@@ -9,12 +9,12 @@ on:
     - '**.csproj'
 
 env:
-  DOTNET_VERSION: '6.0.4' # The .NET SDK version to use
+  DOTNET_VERSION: '6.0.202-bullseye-slim-amd64' # The .NET SDK version to use
 
 jobs:
   build-and-test:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
